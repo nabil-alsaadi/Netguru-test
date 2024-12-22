@@ -23,7 +23,7 @@ export const NoteForm = (props) => {
                 className="form-control"
                 data-testid="input-title"
                 name="title"
-                value={note.title}
+                value={note?.title}
                 onChange={(e) => onChange({ ...note, title: e.target.value })}
             />
         </div>
@@ -33,7 +33,7 @@ export const NoteForm = (props) => {
                 className="form-control"
                 data-testid="input-text"
                 name="text"
-                value={note.text}
+                value={note?.text}
                 onChange={(e) => onChange({ ...note, text: e.target.value })}
             />
         </div>

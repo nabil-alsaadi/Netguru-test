@@ -18,11 +18,11 @@ export const App = (props) => {
         const data = await service.getNotes();
         console.log(data)
         setNotes(data);
-        setSelected(data[0])
+        setSelected(null);
     }
     // Select new empty note
     function newNote(){
-
+        setSelected({ id: null, title: '', text: '' });
     }
 
     // Set note as selected
@@ -33,6 +33,7 @@ export const App = (props) => {
     // Save note to service
     async function onSubmit(note){
         const updated = await service.saveNote(note)
+        fetchNotes()
     }
 
     // Unselect note
@@ -53,7 +54,7 @@ export const App = (props) => {
                 </div>
                 <div className="col-md-8">
                     <NoteForm note={selected} onSubmit={onSubmit} onChange={onSelect} onCancel={onCancel} />
-                    <div><button id="new-note">New Note</button></div>
+                    <div><button id="new-note" data-testid="new-note" onClick={newNote}>New Note</button></div>
                 </div>
             </div>
         </div>

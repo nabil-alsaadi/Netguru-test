@@ -24,9 +24,11 @@ export class NotesService {
      * @param note 
      */
     async saveNote(note){
+        console.log('saveNote',note)
         const index = this.notes.findIndex(({ id }) => note.id === id )
         if (index === -1) {
             note.id = uuid()
+            
             this.update(notes => notes.push(note))
         } else {
             this.update(notes => notes.splice(index, 1, note))
